@@ -9,24 +9,40 @@ def index():
 
 @app.route('/get_quote', methods=['POST'])
 def get_quote():
-    # Collecting data from the form
-    customer_name = request.form.get('customer_name')
-    customer_email = request.form.get('customer_email')
-    insurance_type = request.form.get('insurance_type')
-    coverage_amount = request.form.get('coverage_amount')
-    age = request.form.get('age')
+    # Collect form data
+    data = request.json
+    print("Incoming Data:", data)  # Debugging: Log the incoming data
 
-    # Process the inputs
+    # Extract fields
+    customer_name = data.get('customer_name')
+    customer_email = data.get('customer_email')
+    insurance_type = data.get('insurance_type')
+    coverage_amount = data.get('coverage_amount')
+    age = data.get('age')
+
+    # Validate input
+    errors = []
+    if not customer_name:
+        errors.append("Name is required.")
+    if not customer_email or "@" not in customer_email:
+        errors.append("Valid email is required.")
+    if not insurance_type:
+        errors.append("Insurance type is required.")
+    if not coverage_amount or not str(coverage_amount).isdigit():
+        errors.append("Valid coverage amount is required.")
+    if not age or not str(age).isdigit():
+        errors.append("Valid age is required.")
+
+    if errors:
+        return jsonify({'errors': errors}), 400
+
+    # Process the quote
     quote = calculate_quote(insurance_type, coverage_amount, age)
-
-    # Simulate personalized email content
     email_content = generate_quote_email(customer_name, insurance_type, quote)
 
+    # Return JSON response
     return jsonify({
-        'customer': {
-            'name': customer_name,
-            'email': customer_email,
-        },
+        'customer': {'name': customer_name, 'email': customer_email},
         'insurance_type': insurance_type,
         'coverage_amount': coverage_amount,
         'quote': quote,
@@ -39,12 +55,12 @@ def calculate_quote(insurance_type, coverage_amount, age):
     age_factor = (100 - int(age)) * 0.5
     coverage_factor = int(coverage_amount) * 0.01
 
-    if insurance_type == "Auto":
-        insurance_factor = 1.2
-    elif insurance_type == "Home":
-        insurance_factor = 1.5
-    else:  # Default or "Health"
-        insurance_factor = 1.0
+    insurance_factors = {
+        "Auto": 1.2,
+        "Home": 1.5,
+        "Health": 1.0
+    }
+    insurance_factor = insurance_factors.get(insurance_type, 1.0)
 
     return round(base_rate + age_factor + coverage_factor * insurance_factor, 2)
 
