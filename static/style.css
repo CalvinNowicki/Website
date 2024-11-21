@@ -1,77 +1,102 @@
-/* Reset and Basic Styles */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
+/* Global Styles */
 body {
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    background: #121212;
+    color: #e0e0e0;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
 }
 
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem 2rem;
-    background: #0077b6;
-    color: #fff;
+    background: #1e1e1e;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+.navbar a {
+    color: #00ffcc;
+    margin-left: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.navbar button {
+    background: none;
+    color: #00ffcc;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
 }
-.nav-links a:hover {
-    text-decoration: underline;
+.navbar button:hover {
+    color: #00ffaa;
 }
 
 /* Hero Section */
 .hero {
+    text-align: center;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    background: linear-gradient(to right, #0077b6, #00b4d8);
-    color: #fff;
-    text-align: center;
-    padding: 0 1rem;
+    color: white;
+    position: relative;
 }
-.hero-content h1 {
-    font-size: 3rem;
+.hero h1 {
+    font-size: 3.5rem;
+    text-shadow: 0 4px 20px rgba(0, 255, 204, 0.7);
     margin-bottom: 1rem;
 }
-.hero-content p {
-    font-size: 1.2rem;
+.hero p {
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 .cta-button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: #ffd60a;
-    color: #000;
-    text-transform: uppercase;
+    background-color: #00ffcc;
+    color: black;
+    font-size: 1.2rem;
     font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    transition: all 0.3s;
 }
 .cta-button:hover {
-    background: #ffbe0b;
+    background-color: #00ffaa;
+    transform: scale(1.1);
+}
+
+/* Form Inputs */
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+.form-input:focus {
+    outline: 2px solid #00ffcc;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Footer */
 .footer {
+    background: #1e1e1e;
+    padding: 1rem 0;
     text-align: center;
-    padding: 1rem;
-    background: #0077b6;
-    color: #fff;
+    color: #00ffcc;
+    font-size: 1.1rem;
 }
