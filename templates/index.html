@@ -3,36 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insurance Quoting Service</title>
-    <link rel="stylesheet" href="style.css">
+    <title>QuoteVerse | Advanced Insurance Quoting</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <nav class="navbar">
-            <h1>QuoteSaver</h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#get-quote">Get a Quote</a></li>
-            </ul>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">Quote<span style="color:#00ffcc;">Verse</span></div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#quote">Get a Quote</a>
+            <a href="#contact">Contact</a>
+            <button id="dark-mode-toggle">🌙</button>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
+        <canvas id="hero-canvas"></canvas>
         <div class="hero-content">
-            <h1>Save Big on Insurance</h1>
-            <p>Compare policies instantly and find the best deal tailored to you.</p>
-            <a href="#get-quote" class="cta-button">Get a Quote Now</a>
+            <h1>Welcome to QuoteVerse</h1>
+            <p>The smartest and fastest way to get your insurance quote.</p>
+            <p>Secure. Accurate. Instant.</p>
+            <a href="#quote" class="cta-button">Start Quoting</a>
         </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Why Choose QuoteVerse</h2>
+        <div class="feature-cards">
+            <div class="card glass">
+                <h3>AI Assistance</h3>
+                <p>Navigate insurance like never before with our AI-powered guidance.</p>
+            </div>
+            <div class="card glass">
+                <h3>Seamless Experience</h3>
+                <p>Fast, intuitive, and built for the modern world.</p>
+            </div>
+            <div class="card glass">
+                <h3>Accuracy Guaranteed</h3>
+                <p>Get quotes that you can rely on, every time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quoting Form -->
+    <section id="quote" class="quote">
+        <h2>Start Your Quote</h2>
+        <form id="quote-form">
+            <div class="form-step active">
+                <h3>Step 1: Your Information</h3>
+                <input type="text" id="customer_name" name="customer_name" placeholder="Full Name" class="form-input" required>
+                <input type="email" id="customer_email" name="customer_email" placeholder="Email Address" class="form-input" required>
+                <button type="button" class="next-step">Next</button>
+            </div>
+            <div class="form-step">
+                <h3>Step 2: Policy Preferences</h3>
+                <select id="insurance_type" name="insurance_type" class="form-input" required>
+                    <option value="">Select Insurance Type</option>
+                    <option value="Auto">Auto</option>
+                    <option value="Home">Home</option>
+                    <option value="Health">Health</option>
+                </select>
+                <input type="number" id="coverage_amount" name="coverage_amount" placeholder="Coverage Amount" class="form-input" required>
+                <input type="number" id="age" name="age" placeholder="Age" class="form-input" required>
+                <button type="button" class="prev-step">Back</button>
+                <button type="submit" class="cta-button">Get Quote</button>
+            </div>
+        </form>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 QuoteSaver. All rights reserved.</p>
+        <p>&copy; 2024 QuoteVerse. Built for a smarter future.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/static/script.js"></script>
 </body>
 </html>
