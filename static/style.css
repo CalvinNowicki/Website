@@ -8,9 +8,9 @@ body {
 }
 
 header {
-  background: #008080;
+  background: linear-gradient(90deg, #008080, #005959);
   color: white;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   text-align: center;
 }
 
@@ -19,34 +19,42 @@ header h1 {
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
   display: flex;
   justify-content: center;
   gap: 1rem;
+  list-style: none;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
+nav ul li a:hover {
+  background: #005959;
+}
+
+/* Section Styles */
 main {
   padding: 2rem;
 }
 
 section {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   padding: 1.5rem;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
   color: #008080;
 }
 
+/* Buttons */
 button {
   background: #008080;
   color: white;
@@ -54,16 +62,11 @@ button {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
+  transition: background 0.3s;
 }
 
 button:hover {
   background: #005959;
-}
-
-input {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
 footer {
