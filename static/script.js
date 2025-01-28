@@ -1,6 +1,6 @@
 // Learn More button functionality
 document.getElementById('learnMore').addEventListener('click', () => {
-  alert('The Cash-First Financial Strategy helps you achieve financial independence by avoiding debt and rejecting traditional banking.');
+  alert('Discover how the Cash-First Strategy empowers financial independence and eliminates debt reliance.');
 });
 
 // Savings Calculator
