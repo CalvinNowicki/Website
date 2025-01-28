@@ -17,36 +17,46 @@
         <li><a href="#defi">Decentralized Finance</a></li>
         <li><a href="#budget">Cash-First Budgeting</a></li>
         <li><a href="#lending">Community Lending</a></li>
+        <li><a href="#roadmap">Your Financial Roadmap</a></li>
         <li><a href="#community">Community</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="overview">
-      <h2>Overview</h2>
-      <p>The Cash-First Financial Strategy is a revolutionary approach to achieving financial independence by avoiding debt, rejecting traditional banking systems, and focusing on building a cash-first lifestyle.</p>
-      <button id="learnMore">Learn More</button>
+    <section id="overview" class="section">
+      <div class="animated-content">
+        <h2>Overview</h2>
+        <p>The Cash-First Financial Strategy offers an unparalleled approach to achieving financial freedom by rejecting debt and embracing a cash-first philosophy. Unlock the tools and knowledge to transform your financial life today.</p>
+        <button id="learnMore">Learn More</button>
+      </div>
     </section>
 
-    <section id="principles">
+    <section id="principles" class="section">
       <h2>Core Principles</h2>
-      <ul>
-        <li>Avoid borrowing for major expenses, including homes and cars.</li>
-        <li>Build a cash-first savings plan to achieve financial independence.</li>
-        <li>Reject traditional banking systems and credit scores.</li>
-        <li>Support community lending and alternative financial systems.</li>
-        <li>Live within your means at all times.</li>
-      </ul>
+      <div class="grid-container">
+        <div class="card">
+          <h3>Avoid Debt</h3>
+          <p>Never borrow for major expenses. Learn how to save for what you need and avoid credit traps.</p>
+        </div>
+        <div class="card">
+          <h3>Live Within Your Means</h3>
+          <p>Master strategies to align your lifestyle with your income while building wealth.</p>
+        </div>
+        <div class="card">
+          <h3>Embrace Cash</h3>
+          <p>Adopt cash-based savings and payment systems to avoid interest and hidden fees.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="tools">
+    <section id="tools" class="section">
       <h2>Interactive Tools</h2>
       <div id="calculator">
         <h3>Debt-Free Savings Calculator</h3>
-        <label for="income">Monthly Income: </label>
+        <label for="income">Monthly Income:</label>
         <input type="number" id="income" placeholder="Enter your income"><br>
-        <label for="expenses">Monthly Expenses: </label>
+        <label for="expenses">Monthly Expenses:</label>
         <input type="number" id="expenses" placeholder="Enter your expenses"><br>
         <button id="calculate">Calculate Savings</button>
         <p id="result"></p>
@@ -54,45 +64,64 @@
 
       <div id="quiz">
         <h3>Financial Literacy Quiz</h3>
-        <p>Test your knowledge of the Cash-First Strategy.</p>
+        <p>Can you pass our Cash-First Quiz? Test your knowledge now!</p>
         <button id="startQuiz">Start Quiz</button>
         <div id="quizContainer"></div>
       </div>
     </section>
 
-    <section id="defi">
+    <section id="defi" class="section">
       <h2>Decentralized Finance (DeFi)</h2>
-      <p>Decentralized Finance offers alternatives to traditional banking by using blockchain technology for secure and transparent financial transactions.</p>
+      <p>Explore blockchain-based finance solutions that replace traditional banking. Secure, transparent, and entirely in your control.</p>
       <ul>
-        <li>Set up a decentralized wallet to securely store your assets.</li>
-        <li>Learn about platforms like Ethereum for savings without relying on banks.</li>
-        <li>Discover the benefits of DeFi in achieving financial independence.</li>
+        <li>Set up your own decentralized wallet.</li>
+        <li>Discover DeFi platforms like Ethereum and Avalanche.</li>
+        <li>Learn the risks and benefits of decentralized savings.</li>
       </ul>
+      <canvas id="defiCanvas" width="400" height="400"></canvas>
     </section>
 
-    <section id="budget">
+    <section id="budget" class="section">
       <h2>Cash-First Budgeting</h2>
-      <p>Building a cash-first budget ensures you live within your means while saving for future expenses.</p>
-      <ul>
-        <li>Track all income and expenses with detailed logs.</li>
-        <li>Allocate savings for emergencies, investments, and major purchases.</li>
-        <li>Adopt an anti-consumerism lifestyle by minimizing unnecessary spending.</li>
-      </ul>
+      <p>Get an in-depth guide to creating a budget that prioritizes cash savings and reduces unnecessary spending.</p>
+      <div>
+        <label for="budgetGoals">Your Budgeting Goal:</label>
+        <select id="budgetGoals">
+          <option value="emergency">Build Emergency Fund</option>
+          <option value="retirement">Save for Retirement</option>
+          <option value="home">Buy a Home</option>
+        </select>
+        <button id="budgetPlan">Get Your Plan</button>
+        <p id="budgetResult"></p>
+      </div>
     </section>
 
-    <section id="lending">
+    <section id="lending" class="section">
       <h2>Community Lending Circles</h2>
-      <p>Community Lending Circles allow individuals to borrow funds interest-free from a trusted pool of peers.</p>
+      <p>Learn how trust-based lending circles can provide interest-free alternatives to traditional loans.</p>
       <ul>
-        <li>Learn how to form or join a lending circle.</li>
-        <li>Build trust-based financial systems without banks.</li>
-        <li>Support others in achieving their financial goals.</li>
+        <li>How to form a lending circle.</li>
+        <li>Building trust and transparency.</li>
+        <li>Real-life examples of successful lending circles.</li>
       </ul>
     </section>
 
-    <section id="community">
+    <section id="roadmap" class="section">
+      <h2>Your Personalized Financial Roadmap</h2>
+      <p>Create a step-by-step roadmap tailored to your financial goals.</p>
+      <form id="roadmapForm">
+        <label for="roadmapName">Name:</label>
+        <input type="text" id="roadmapName" placeholder="Your Name"><br>
+        <label for="roadmapGoal">Primary Goal:</label>
+        <input type="text" id="roadmapGoal" placeholder="E.g., Save $20,000 for a home"><br>
+        <button type="submit">Generate Roadmap</button>
+      </form>
+      <div id="roadmapResult"></div>
+    </section>
+
+    <section id="community" class="section">
       <h2>Join the Community</h2>
-      <p>Become part of a movement that challenges financial norms. Sign up to receive exclusive content, tools, and updates.</p>
+      <p>Sign up for updates, exclusive tools, and access to our Cash-First forums.</p>
       <form id="signupForm">
         <input type="email" id="email" placeholder="Enter your email" required>
         <button type="submit">Sign Up</button>
