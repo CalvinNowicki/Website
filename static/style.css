@@ -1,77 +1,74 @@
-/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  background: #f9fafb;
   color: #333;
 }
 
 header {
-  background: linear-gradient(90deg, #008080, #005959);
+  background: linear-gradient(90deg, #008080, #00a4a4);
   color: white;
-  padding: 1.5rem 0;
+  padding: 1.5rem;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
+  font-size: 2.5rem;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 1rem;
   list-style: none;
+  gap: 1rem;
+  padding: 0;
+}
+
+nav ul li {
+  font-size: 1.1rem;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
-  padding: 0.5rem;
-  border-radius: 5px;
-  transition: background 0.3s;
+  color: white;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  background: #005959;
+  color: #fffa65;
 }
 
-/* Section Styles */
-main {
-  padding: 2rem;
-}
-
-section {
+/* Sections */
+.section {
+  padding: 3rem;
   margin: 2rem 0;
-  padding: 1.5rem;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
+.section h2 {
   color: #008080;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* Buttons */
-button {
-  background: #008080;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
-button:hover {
-  background: #005959;
+.card {
+  background: #f4f4f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #333;
-  color: white;
+.card:hover {
+  transform: translateY(-10px);
 }
