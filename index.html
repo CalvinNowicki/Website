@@ -1,86 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuoteVerse | Advanced Insurance Quoting</title>
-    <link rel="stylesheet" href="static/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash-First Financial Strategy</title>
+  <link rel="stylesheet" href="/static/style.css"">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="logo">Quote<span style="color:#00ffcc;">Verse</span></div>
-        <nav>
-            <a href="#features">Features</a>
-            <a href="#quote">Get a Quote</a>
-            <a href="#contact">Contact</a>
-            <button id="dark-mode-toggle">🌙</button>
-        </nav>
-    </header>
+  <header>
+    <h1>Cash-First Financial Strategy</h1>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#principles">Core Principles</a></li>
+        <li><a href="#tools">Interactive Tools</a></li>
+        <li><a href="#community">Join the Community</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <canvas id="hero-canvas"></canvas>
-        <div class="hero-content">
-            <h1>Welcome to QuoteVerse</h1>
-            <p>The smartest and fastest way to get your insurance quote.</p>
-            <p>Secure. Accurate. Instant.</p>
-            <a href="#quote" class="cta-button">Start Quoting</a>
-        </div>
+  <main>
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>Learn how to achieve financial independence by adopting a cash-first lifestyle, avoiding debt, and rejecting traditional banking systems.</p>
+      <button id="learnMore">Learn More</button>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2>Why Choose QuoteVerse</h2>
-        <div class="feature-cards">
-            <div class="card glass">
-                <h3>AI Assistance</h3>
-                <p>Navigate insurance like never before with our AI-powered guidance.</p>
-            </div>
-            <div class="card glass">
-                <h3>Seamless Experience</h3>
-                <p>Fast, intuitive, and built for the modern world.</p>
-            </div>
-            <div class="card glass">
-                <h3>Accuracy Guaranteed</h3>
-                <p>Get quotes that you can rely on, every time.</p>
-            </div>
-        </div>
+    <section id="principles">
+      <h2>Core Principles</h2>
+      <ul>
+        <li>Avoid borrowing for all expenses, including homes and automobiles.</li>
+        <li>Rent until you can afford to buy in cash.</li>
+        <li>Live within your means at all times.</li>
+        <li>Build a cash-first savings plan.</li>
+        <li>Reject traditional banks and credit scores.</li>
+      </ul>
     </section>
 
-    <!-- Quoting Form -->
-    <section id="quote" class="quote">
-        <h2>Start Your Quote</h2>
-        <form id="quote-form">
-            <div class="form-step active">
-                <h3>Step 1: Your Information</h3>
-                <input type="text" id="customer_name" name="customer_name" placeholder="Full Name" class="form-input" required>
-                <input type="email" id="customer_email" name="customer_email" placeholder="Email Address" class="form-input" required>
-                <button type="button" class="next-step">Next</button>
-            </div>
-            <div class="form-step">
-                <h3>Step 2: Policy Preferences</h3>
-                <select id="insurance_type" name="insurance_type" class="form-input" required>
-                    <option value="">Select Insurance Type</option>
-                    <option value="Auto">Auto</option>
-                    <option value="Home">Home</option>
-                    <option value="Health">Health</option>
-                </select>
-                <input type="number" id="coverage_amount" name="coverage_amount" placeholder="Coverage Amount" class="form-input" required>
-                <input type="number" id="age" name="age" placeholder="Age" class="form-input" required>
-                <button type="button" class="prev-step">Back</button>
-                <button type="submit" class="cta-button">Get Quote</button>
-            </div>
-        </form>
+    <section id="tools">
+      <h2>Interactive Tools</h2>
+      <div id="calculator">
+        <h3>Debt-Free Savings Calculator</h3>
+        <label for="monthlyIncome">Monthly Income: </label>
+        <input type="number" id="monthlyIncome" placeholder="Enter your income"><br>
+        <label for="monthlyExpenses">Monthly Expenses: </label>
+        <input type="number" id="monthlyExpenses" placeholder="Enter your expenses"><br>
+        <button id="calculate">Calculate Savings</button>
+        <p id="result"></p>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 QuoteVerse. Built for a smarter future.</p>
-    </footer>
+    <section id="community">
+      <h2>Join the Movement</h2>
+      <p>Sign up to receive updates, tools, and access to the Cash-First community.</p>
+      <form id="signupForm">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Join Now</button>
+      </form>
+    </section>
+  </main>
 
-    <script src="static/script.js"></script>
+  <footer>
+    <p>© 2025 Cash-First Financial Strategy. All rights reserved.</p>
+  </footer>
+
+  <script src="/static/script.js"></script>
 </body>
 </html>
