@@ -3,12 +3,10 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
   background-color: #f4f4f9;
   color: #333;
 }
 
-/* Header */
 header {
   background: #008080;
   color: white;
@@ -28,20 +26,11 @@ nav ul {
   gap: 1rem;
 }
 
-nav ul li {
-  display: inline;
-}
-
 nav ul li a {
   color: white;
   text-decoration: none;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Main Content */
 main {
   padding: 2rem;
 }
@@ -75,17 +64,11 @@ input {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 0.5rem 0;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   background: #333;
   color: white;
-}
-
-footer p {
-  margin: 0;
 }
