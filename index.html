@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cash-First Financial Strategy</title>
-  <link rel="stylesheet" href="/static/style.css"">
+  <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
   <header>
@@ -14,7 +14,8 @@
         <li><a href="#overview">Overview</a></li>
         <li><a href="#principles">Core Principles</a></li>
         <li><a href="#tools">Interactive Tools</a></li>
-        <li><a href="#community">Join the Community</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#resources">Resources</a></li>
       </ul>
     </nav>
   </header>
@@ -22,18 +23,18 @@
   <main>
     <section id="overview">
       <h2>Overview</h2>
-      <p>Learn how to achieve financial independence by adopting a cash-first lifestyle, avoiding debt, and rejecting traditional banking systems.</p>
+      <p>Discover the Cash-First Financial Strategy, a new approach to financial independence. Learn how to avoid debt, reject traditional banking, and build a life of true financial freedom.</p>
       <button id="learnMore">Learn More</button>
     </section>
 
     <section id="principles">
       <h2>Core Principles</h2>
       <ul>
-        <li>Avoid borrowing for all expenses, including homes and automobiles.</li>
-        <li>Rent until you can afford to buy in cash.</li>
+        <li>Avoid borrowing for major expenses, including homes and cars.</li>
         <li>Live within your means at all times.</li>
-        <li>Build a cash-first savings plan.</li>
-        <li>Reject traditional banks and credit scores.</li>
+        <li>Build a cash-first savings plan to achieve financial independence.</li>
+        <li>Reject traditional banking systems and credit scores.</li>
+        <li>Support community lending and alternative finance systems.</li>
       </ul>
     </section>
 
@@ -41,22 +42,38 @@
       <h2>Interactive Tools</h2>
       <div id="calculator">
         <h3>Debt-Free Savings Calculator</h3>
-        <label for="monthlyIncome">Monthly Income: </label>
-        <input type="number" id="monthlyIncome" placeholder="Enter your income"><br>
-        <label for="monthlyExpenses">Monthly Expenses: </label>
-        <input type="number" id="monthlyExpenses" placeholder="Enter your expenses"><br>
+        <label for="income">Monthly Income: </label>
+        <input type="number" id="income" placeholder="Enter your income"><br>
+        <label for="expenses">Monthly Expenses: </label>
+        <input type="number" id="expenses" placeholder="Enter your expenses"><br>
         <button id="calculate">Calculate Savings</button>
         <p id="result"></p>
+      </div>
+
+      <div id="quiz">
+        <h3>Financial Literacy Quiz</h3>
+        <p>Test your knowledge of the Cash-First Strategy.</p>
+        <button id="startQuiz">Start Quiz</button>
+        <div id="quizContainer"></div>
       </div>
     </section>
 
     <section id="community">
-      <h2>Join the Movement</h2>
-      <p>Sign up to receive updates, tools, and access to the Cash-First community.</p>
+      <h2>Join the Community</h2>
+      <p>Become part of a movement that challenges financial norms. Sign up to receive exclusive content, tools, and updates.</p>
       <form id="signupForm">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Join Now</button>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Sign Up</button>
       </form>
+    </section>
+
+    <section id="resources">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="#">Guide to Decentralized Finance (DeFi)</a></li>
+        <li><a href="#">How to Build a Cash-First Budget</a></li>
+        <li><a href="#">Understanding Community Lending Circles</a></li>
+      </ul>
     </section>
   </main>
 
@@ -64,6 +81,6 @@
     <p>© 2025 Cash-First Financial Strategy. All rights reserved.</p>
   </footer>
 
-  <script src="/static/script.js"></script>
+  <script src="static/script.js"></script>
 </body>
 </html>
