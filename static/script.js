@@ -1,8 +1,3 @@
-// Learn More button functionality
-document.getElementById('learnMore').addEventListener('click', () => {
-  alert('Discover how the Cash-First Strategy empowers financial independence and eliminates debt reliance.');
-});
-
 // Savings Calculator
 document.getElementById('calculate').addEventListener('click', () => {
   const income = parseFloat(document.getElementById('income').value);
@@ -19,29 +14,42 @@ document.getElementById('calculate').addEventListener('click', () => {
     : `You are overspending by $${Math.abs(savings).toFixed(2)} per month.`;
 });
 
-// Quiz functionality
-document.getElementById('startQuiz').addEventListener('click', () => {
-  const quizContainer = document.getElementById('quizContainer');
-  quizContainer.innerHTML = `
-    <p>What is the main principle of the Cash-First Strategy?</p>
-    <button onclick="checkAnswer('A')">A. Avoid Debt</button>
-    <button onclick="checkAnswer('B')">B. Use Credit Scores</button>
-    <button onclick="checkAnswer('C')">C. Borrow for Expenses</button>
+// Financial Roadmap Generator
+document.getElementById('roadmapForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('roadmapName').value;
+  const goal = document.getElementById('roadmapGoal').value;
+
+  if (!name || !goal) {
+    document.getElementById('roadmapResult').textContent = 'Please complete all fields.';
+    return;
+  }
+
+  document.getElementById('roadmapResult').innerHTML = `
+    <h3>${name}'s Financial Roadmap</h3>
+    <p>Goal: ${goal}</p>
+    <ol>
+      <li>Create a monthly budget aligned with your goal.</li>
+      <li>Set up an emergency fund with 6 months of living expenses.</li>
+      <li>Explore investment options to grow your savings.</li>
+    </ol>
   `;
 });
 
-function checkAnswer(choice) {
-  const quizContainer = document.getElementById('quizContainer');
-  if (choice === 'A') {
-    quizContainer.innerHTML = '<p>Correct! The Cash-First Strategy emphasizes avoiding debt.</p>';
-  } else {
-    quizContainer.innerHTML = '<p>Incorrect. Try again!</p>';
-  }
+// DeFi Animation
+const canvas = document.getElementById('defiCanvas');
+const ctx = canvas.getContext('2d');
+let angle = 0;
+
+function drawDeFi() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.arc(200, 200, 100, angle, angle + Math.PI / 2);
+  ctx.strokeStyle = '#008080';
+  ctx.lineWidth = 5;
+  ctx.stroke();
+  angle += 0.05;
+  requestAnimationFrame(drawDeFi);
 }
 
-// Signup form functionality
-document.getElementById('signupForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const email = document.getElementById('email').value;
-  alert(`Thank you for signing up! Updates will be sent to ${email}`);
-});
+drawDeFi();
